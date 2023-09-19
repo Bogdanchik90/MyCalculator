@@ -67,12 +67,17 @@ public class Main {
 
         String[] strs = str.split(" ");
 
-        if(strs.length != 3) {
+        try {
+            if (strs.length != 3)
+                throw new Exception();
+        } catch (Exception e){
             System.out.println("строка не соответствует правилам А + В");
             on = false;
         }
 
+
         try {
+
             value1 = Integer.parseInt(strs[0]);
         } catch (Exception e) {
             check = true;
